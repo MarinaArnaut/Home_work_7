@@ -1,17 +1,17 @@
-def rifma(chant):
-    st = chant.lower().split()
+def rhyme(song):
+    str = song.lower().split()
     def f(x): return sum(1 for i in x if i in 'аеёиоуыэюя')
-    tmp = f(st[0])
-    if all([f(i) == tmp for i in st]):
+    tmp = f(str[0])
+    if all([f(i) == tmp for i in str]):
         return 'Парам пам-пам'
     return 'Пам парам'
 
 
-print(rifma("Хорошо-живет-на-свете-Винни-Пух!\
+print(rhyme("Хорошо-живет-на-свете-Винни-Пух!\
  Оттого-поет-он-эти-Песни-вслух!"))
 
-print(rifma("И-не-важно,-чем-он-занят,\
+print(rhyme("И-не-важно,-чем-он-занят,\
  Если-он-худеть-не-станет,"))
 
-print(rifma("А-ведь-он-худеть-не-станет,\
+print(rhyme("А-ведь-он-худеть-не-станет,\
  Если-конечно...-Вовремя-подкрепиться..."))
